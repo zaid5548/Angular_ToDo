@@ -7,6 +7,8 @@ import { TodosComponent } from './MyComponents/todos/todos.component';
 import { NavbarComponent } from './MyComponents/navbar/navbar.component';
 import { FooterComponent } from './MyComponents/footer/footer.component';
 import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component';
+import { AddTodoComponent } from './MyComponents/add-todo/add-todo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component'
     TodosComponent,
     NavbarComponent,
     FooterComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
