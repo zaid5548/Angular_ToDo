@@ -1,5 +1,6 @@
 <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
-<h4>Your Todo</h4>
+<h4>Your Todo </h4>
+<p class="text-danger h4">Number Of Total Todos In this Page : <b class="text-success h3">{{count}}</b> </p>
 <div *ngIf="this.todos.length===0; else elseBlock">
     <h1 class="text-danger
 

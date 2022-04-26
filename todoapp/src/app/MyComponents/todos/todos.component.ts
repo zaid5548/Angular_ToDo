@@ -9,14 +9,18 @@ import {Todo } from "../../Todo";
 export class TodosComponent implements OnInit {
   localItem:string|null;
   todos:Todo[];
+  count:number|0;
 
 constructor(){
   this.localItem=localStorage.getItem("todos");
   if(this.localItem==null){
     this.todos=[]
+    this.count=0
   }else{
     console.log("what happend")
     this.todos=JSON.parse(this.localItem);
+    this.count=this.todos.length;
+    console.log("Total Count: "+this.count);
   }
 }
   ngOnInit(): void {
@@ -27,12 +31,20 @@ constructor(){
     const index=this.todos.indexOf(todo);
     this.todos.splice(index,1);
     localStorage.setItem("todos",JSON.stringify(this.todos));
+    this.count=this.todos.length;
+    console.log("Total Count: "+this.count);
   }
 
   addTodo(todo:Todo){
     console.log(todo);
-    this.todos.push(todo);
-    localStorage.setItem("todos",JSON.stringify(this.todos));
+    if(todo.title===null || todo.title==="" || todo.title===undefined){
+      alert('Please Enter the Value in Input Areas...');
+    }else{
+      this.todos.push(todo);
+      localStorage.setItem("todos",JSON.stringify(this.todos));
+    }
+    this.count=this.todos.length;
+    console.log("Total Count: "+this.count);
   }
 
 }
