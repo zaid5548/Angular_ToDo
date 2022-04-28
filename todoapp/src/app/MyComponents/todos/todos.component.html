@@ -1,3 +1,5 @@
+<div class="container">
+    <h1 class="text-center md3">Todo List by Zaid Khan</h1>
 <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
 <h4>Your Todo </h4>
 <p class="text-danger h4">Number Of Total Todos In this Page : <b class="text-success h3">{{count}}</b> </p>
@@ -11,3 +13,4 @@
         <app-todo-item [todo]="todo" [i]='i' (todoDelete)="deleteTodo($event)" (todoCheckbox)="toggleTodo($event)"></app-todo-item>
     </div>
 </ng-template>
+</div>

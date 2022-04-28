@@ -9,6 +9,9 @@ import { FooterComponent } from './MyComponents/footer/footer.component';
 import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component';
 import { AddTodoComponent } from './MyComponents/add-todo/add-todo.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './MyComponents/about/about.component';
+import { ContactComponent } from './MyComponents/contact/contact.component';
+import { BlogComponent } from './MyComponents/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     TodoItemComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    AboutComponent,
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
