@@ -1,5 +1,12 @@
 <div class="my-3">
+    <h5 [ngClass]="{'strike':!todo.active}">{{todo.title}}</h5>
     <p>todo-item works! {{todo.sno}} - {{todo.title}}</p>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault{{i}}" (click)="onCheckBoxClick(todo)" [checked]="!todo.active" >
+        <label class="form-check-label" for="flexCheckDefault">
+          Mark As Done
+        </label>
+      </div>      
     <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
     <button class="btn btn-primary" > Create</button>
 </div>
