@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './MyComponents/about/about.component';
 import { ContactComponent } from './MyComponents/contact/contact.component';
 import { BlogComponent } from './MyComponents/blog/blog.component';
+import { UpdateTodoComponent } from './MyComponents/update-todo/update-todo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BlogComponent } from './MyComponents/blog/blog.component';
     AddTodoComponent,
     AboutComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
+    UpdateTodoComponent
   ],
   imports: [
     BrowserModule,

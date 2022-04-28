@@ -12,6 +12,7 @@ export class TodoItemComponent implements OnInit {
   @Input() i:number |undefined;
   @Output() todoDelete: EventEmitter<Todo>=new EventEmitter();
   @Output() todoCheckbox:EventEmitter<Todo>=new EventEmitter();
+  showForm:boolean|undefined;
 
   constructor() { }
 
@@ -25,6 +26,17 @@ export class TodoItemComponent implements OnInit {
 
   onCheckBoxClick(todo:Todo){
     this.todoCheckbox.emit(todo);
+  }
+
+  onClickForm(showForm:boolean){
+    console.log("Flag of ShowForm : "+showForm);
+    if(this.showForm===true){
+      console.log("Inside If Condition...");
+      this.showForm=false;
+    }else{
+      console.log("Inside Else Condition...");
+      this.showForm=true;
+    }
   }
 
 }
